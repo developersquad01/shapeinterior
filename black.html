@@ -18,11 +18,68 @@
     <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
     <!-- page name -->
-    <title>Ashley</title>
+    <title>Black | color </title>
+    <!-- <script>
+        // Get the current URL's `id` parameter
+        const params = new URLSearchParams(window.location.search);
+        const userId = params.get('id');  // e.g., id=12345
+        // Only run this if there's a user ID present
+        if (userId) {
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const url = new URL(link.href, window.location.origin);
 
+                    // Add or update the 'id' param
+                    url.searchParams.set('id', userId);
+
+                    // Prevent default and redirect manually with updated URL
+                    e.preventDefault();
+                    window.location.href = url.toString();
+                });
+            });
+        }
+
+    </script> -->
 </head>
 
 <body>
+  <!-- <script>
+    // ✅ Get the ID from the current URL
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get('id');  // e.g., "123"
+
+    // ✅ Only proceed if `id` is present
+    if (userId) {
+      document.querySelectorAll('a').forEach(link => {
+        // Listen for clicks
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const url = new URL(link.href, window.location.origin);
+
+          // Append or update the 'id' parameter
+          url.searchParams.set('id', userId);
+
+          // Redirect manually with updated URL
+          window.location.href = url.toString();
+        });
+      });
+    }
+  </script> -->
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+       
+        // Get the query parameters from the current URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Get the value of the 'title' parameter
+        const title = params.get('id');
+        document.getElementById("seriestitle").innerText= title;
+        
+    });
+</script>
+
+
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
@@ -108,7 +165,7 @@
                                         <a href="#.">Newsletter</a>
                                         <ul>
                                             <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
+                                            <li><a href="#">Publication</a></li>
                                         </ul>
                                     </li>
                                     <li class="mil-has-children">
@@ -225,7 +282,7 @@
             <div id="swupMain" class="mil-main-transition">
 
                 <!-- banner -->
-                <div class="mil-inner-banner mil-p-0-120">
+                <div class="mil-inner-banner mil-p-0-0">
                     <div class="mil-banner-content mil-up">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6"
@@ -233,12 +290,13 @@
                         </div>
                         <div class="container">
                             <ul class="mil-breadcrumbs mil-mb-60">
-                                <li><a href="home-1.html">Homepage</a></li>
+                                <li><a href="home-1.html?id=">Homepage</a></li>
                                 <li><a href="blog.html">Products</a></li>
                                 <li><a href="sub-catagory.html">Sub-Category</a></li>
                                 <li><a href="#">Colors</a></li>
                             </ul>
-                            <h1 class="mil-mb-60">Sub-Category of <br>Our <span class="mil-thin">Products</span></h1>
+                            <h1 class="mil-mb-60" id="seriestitle"> <br> <span class="mil-thin"></span></h1>
+                            <!-- <h1 class="mil-mb-60">Sub-Category of <br>Our <span class="mil-thin">Products</span></h1> -->
                             <a href="#blog" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
                                 <span>Explor</span>
                             </a>
@@ -269,9 +327,9 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/8.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_010001.jpg" alt="cover" >
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -293,9 +351,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/7.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_020001.jpg" alt="cover" >
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -317,9 +375,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/1.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_030001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -341,9 +399,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/3.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_040001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -365,9 +423,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/4.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_050001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -389,9 +447,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_060001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -413,9 +471,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_070001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -438,9 +496,9 @@
                             </div>
 
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_080001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -462,9 +520,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_090001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -486,9 +544,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_100001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -510,9 +568,9 @@
 
                             </div>
                             <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
+                                <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius">
+                                        <img src="img/reseoo/Black/M_110001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -533,34 +591,7 @@
                                 </a>
 
                             </div>
-                            <div class="col-lg-12">
-                                <a href="publication.html" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up">
-                                        <img src="img/blog/5.jpg" alt="cover">
-                                    </div>
-                                    <div class="mil-post-descr">
-                                        <div class="mil-labels mil-up mil-mb-30">
-                                            <div class="mil-label mil-upper mil-accent">BLACK</div>
-                                            <div class="mil-label mil-upper">may 24 2023</div>
-                                        </div>
-                                        <h4 class="mil-up mil-mb-30">Project Square</h4>
-                                        <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p>
-                                        <div class="mil-link mil-dark mil-arrow-place mil-up">
-                                            <span>Explore</span>
-                                        </div>
-                                    </div>
-                                </a>
 
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="mil-paination">
-                                    <a href="blog-inner.html" class="mil-pagination-btn mil-active">1</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">2</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">3</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">4</a>
-                                    <a href="blog-inner.html" class="mil-pagination-btn">5</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -827,7 +858,29 @@
         <!-- content -->
     </div>
     <!-- wrapper end -->
+    <script>
+    // ✅ Get the ID from the current URL
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get('id');  // e.g., "123"
 
+    // ✅ Only proceed if `id` is present
+    if (userId) {
+      document.querySelectorAll('a').forEach(link => {
+        // Listen for clicks
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const url = new URL(link.href, window.location.origin);
+
+          // Append or update the 'id' parameter
+          url.searchParams.set('id', userId);
+
+          // Redirect manually with updated URL
+          window.location.href = url.toString();
+        });
+      });
+    }
+  </script>
     <!-- jQuery js -->
     <script src="js/plugins/jquery.min.js"></script>
     <!-- swup js -->

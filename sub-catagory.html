@@ -23,22 +23,7 @@
 </head>
 
 <body>
-    <script>
-        // Run when the page is loaded
-        window.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const title = params.get('title'); // Get the "title" parameter
-
-            if (title) {
-                // Decode the title and do something with it
-                const decodedTitle = decodeURIComponent(title);
-                console.log("Series title:", decodedTitle); // Just for debugging
-
-                // Example: Show it in an element with ID "series-title"
-                document.getElementById('series-title').textContent = decodedTitle;
-            }
-        });
-    </script>
+    
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
@@ -124,7 +109,7 @@
                                         <a href="#" onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;" >Contect Us</a>
                                         <!-- <ul>
                                             <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
+                                            <li><a href="#">Publication</a></li>
                                         </ul> -->
                                     </li>
                                     <li class="mil-has-children mil-active">
@@ -218,7 +203,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -242,7 +227,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -266,7 +251,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -290,7 +275,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -314,7 +299,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -338,7 +323,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -362,7 +347,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -387,7 +372,7 @@
 
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -411,7 +396,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -435,7 +420,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -459,7 +444,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -483,7 +468,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-                                    <div class="mil-cover-frame mil-up" style="border-radius: 20px;">
+                                    <div class="mil-cover-frame mil-up my_img_border_radius" >
                                         <img src="img/blog/M_02.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
@@ -765,7 +750,7 @@
                 const title = titleElement ? encodeURIComponent(titleElement.textContent.trim()) : 'untitled';
                 const nocache = new Date().getTime();
 
-                window.location.href = `black.html?nocache=${nocache}&title=${title}`;
+                window.location.href = `black.html?nocache=${nocache}&id=${title}`;
             });
         });
     </script>
