@@ -43,7 +43,7 @@
 </head>
 
 <body>
-  <!-- <script>
+    <!-- <script>
     // ✅ Get the ID from the current URL
     const params = new URLSearchParams(window.location.search);
     const userId = params.get('id');  // e.g., "123"
@@ -66,18 +66,18 @@
       });
     }
   </script> -->
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-       
-        // Get the query parameters from the current URL
-        const params = new URLSearchParams(window.location.search);
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
 
-        // Get the value of the 'title' parameter
-        const title = params.get('id');
-        document.getElementById("seriestitle").innerText= title;
-        
-    });
-</script>
+            // Get the query parameters from the current URL
+            const params = new URLSearchParams(window.location.search);
+
+            // Get the value of the 'title' parameter
+            const title = params.get('id');
+            document.getElementById("seriestitle").innerText = title;
+
+        });
+    </script>
 
 
 
@@ -125,7 +125,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="home-1.html" class="mil-logo">Black.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -139,113 +139,52 @@
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
                                     <li class="mil-has-children">
-                                        <a href="#.">Homepage</a>
-                                        <ul>
+                                        <a href="#"
+                                            onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;">Home</a>
+                                        <!-- <ul>
                                             <li><a href="home-1.html">Landing page</a></li>
                                             <li><a href="home-2.html">Personal</a></li>
                                             <li><a href="portfolio-3.html">Portfolio slider</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Portfolio</a>
-                                        <ul>
+                                        <a href="#"
+                                            onclick="window.location.href='Portfolio.html?nocache=' + new Date().getTime(); return false;">Portfolio</a>
+                                        <!-- <ul>
                                             <li><a href="portfolio-1.html">Grid type 1</a></li>
                                             <li><a href="portfolio-2.html">Grid type 2</a></li>
                                             <li><a href="portfolio-3.html">Slider</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Services</a>
-                                        <ul>
+                                        <a href="#"
+                                            onclick="window.location.href='KitchenProduct.html?nocache=' + new Date().getTime(); return false;">Product</a>
+                                        <!-- <ul>
                                             <li><a href="services.html">Services List</a></li>
                                             <li><a href="service.html">Single service</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mil-has-children mil-active">
-                                        <a href="#.">Newsletter</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="#">Publication</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Other pages</a>
-                                        <ul>
+                                        <a href="#"
+                                            onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;">Contect
+                                            Us</a>
+                                        <!-- <ul>
+                                            <li><a href="blog.html">Blog List</a></li>
+                                            <li><a href="publication.html">Publication</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="mil-has-children mil-active">
+                                        <a href="#"
+                                            onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;">About
+                                            Us</a>
+                                        <!-- <ul>
                                             <li><a href="team.html">Team</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="404.html">404</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                 </ul>
                             </nav>
-
-                        </div>
-                        <div class="col-xl-7">
-
-                            <div class="mil-menu-right-frame">
-                                <div class="mil-animation-in">
-                                    <div class="mil-animation-frame">
-                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2"
-                                            data-value-2="2"></div>
-                                    </div>
-                                </div>
-                                <div class="mil-menu-right">
-                                    <div class="row">
-                                        <div class="col-lg-8 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Projects</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="project-1.html" class="mil-light-soft">Interior design
-                                                        studio</a></li>
-                                                <li><a href="project-2.html" class="mil-light-soft">Home Security
-                                                        Camera</a></li>
-                                                <li><a href="project-3.html" class="mil-light-soft">Kemia Honest
-                                                        Skincare</a></li>
-                                                <li><a href="project-4.html" class="mil-light-soft">Cascade of Lava</a>
-                                                </li>
-                                                <li><a href="project-5.html" class="mil-light-soft">Air Pro by
-                                                        Molekule</a></li>
-                                                <li><a href="project-6.html" class="mil-light-soft">Tony's
-                                                        Chocolonely</a></li>
-                                            </ul>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Useful links</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="mil-divider mil-mb-60"></div>
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span
-                                                    class="mil-no-wrap">+31 174 705 811</span></p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -319,7 +258,7 @@
                                         <li><a href="black.html" class="mil-active">BLACK</a></li>
                                         <li><a href="Cp.html">CP</a></li>
                                         <!-- <li><a href="sub-catagory.html">Code</a></li> -->
-                                        <li><a href="Gold.html" >GOLD</a></li>
+                                        <li><a href="Gold.html">GOLD</a></li>
                                         <li><a href="Rose-gold.html">ROSE GOLD</a></li>
                                     </ul>
                                 </div>
@@ -329,7 +268,7 @@
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-up my_img_border_radius">
-                                        <img src="img/reseoo/Black/M_010001.jpg" alt="cover" >
+                                        <img src="img/reseoo/Black/M_010001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -353,7 +292,7 @@
                             <div class="col-lg-12">
                                 <a href="#" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
                                     <div class="mil-cover-frame mil-up my_img_border_radius">
-                                        <img src="img/reseoo/Black/M_020001.jpg" alt="cover" >
+                                        <img src="img/reseoo/Black/M_020001.jpg" alt="cover">
                                     </div>
                                     <div class="mil-post-descr">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -633,10 +572,7 @@
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">shapeinterior.</div>
-
-                                    <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
-
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30">Shape Interior.</div>
                                     <form class="mil-subscribe-form mil-up">
                                         <input type="text" placeholder="Enter our email">
                                         <button type="submit"
@@ -651,19 +587,25 @@
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
                                                     <li class="mil-up mil-active">
-                                                        <a href="home-1.html">Home</a>
+                                                        <a href="#"
+                                                            onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;">Home</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="portfolio-1.html">Portfolio</a>
+                                                        <a href="#"
+                                                            onclick="window.location.href='portfolio.html?nocache=' + new Date().getTime(); return false;">Portfolio</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="services.html">Services</a>
+                                                        <a href="#"
+                                                            onclick="window.location.href='kitchenProduct.html?nocache=' + new Date().getTime(); return false;">Product</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="contact.html">Contact</a>
+                                                        <a href="#"
+                                                            onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;">Contact</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="blog.html">Blog</a>
+                                                        <a href="#"
+                                                            onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;">About
+                                                            Us</a>
                                                     </li>
                                                 </ul>
                                             </nav>
@@ -690,19 +632,12 @@
 
                                         <div class="col-md-6 col-lg-5 mil-mb-60">
 
-                                            <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
+                                            <h6 class="mil-muted mil-up mil-mb-30">INDIA</h6>
 
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                <span class="mil-no-wrap">+51 174 705 812</span>
-                                            </p>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands
-                                                <span class="mil-no-wrap">+31 174 705 811</span>
+                                            <p class="mil-light-soft mil-up">Golden Industrial Estate, Plot No. 131,
+                                                Survey No. 139/1, Shapar (Veraval), Shapar Veraval,
+                                                Rajkot-360024,Gujarat
+                                                <span class="mil-no-wrap">+91 98980 35630</span>
                                             </p>
 
                                         </div>
@@ -724,7 +659,7 @@
                                                             class="far fa-circle"></i></a></li>
                                             </ul>
                                         </div>
-                                        <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.
+                                        <p class="mil-light-soft mil-up">�0�8 Copyright 2023 - Mil. All Rights Reserved.
                                         </p>
                                     </div>
 
@@ -859,28 +794,28 @@
     </div>
     <!-- wrapper end -->
     <script>
-    // ✅ Get the ID from the current URL
-    const params = new URLSearchParams(window.location.search);
-    const userId = params.get('id');  // e.g., "123"
+        // ✅ Get the ID from the current URL
+        const params = new URLSearchParams(window.location.search);
+        const userId = params.get('id');  // e.g., "123"
 
-    // ✅ Only proceed if `id` is present
-    if (userId) {
-      document.querySelectorAll('a').forEach(link => {
-        // Listen for clicks
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
+        // ✅ Only proceed if `id` is present
+        if (userId) {
+            document.querySelectorAll('a').forEach(link => {
+                // Listen for clicks
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-          const url = new URL(link.href, window.location.origin);
+                    const url = new URL(link.href, window.location.origin);
 
-          // Append or update the 'id' parameter
-          url.searchParams.set('id', userId);
+                    // Append or update the 'id' parameter
+                    url.searchParams.set('id', userId);
 
-          // Redirect manually with updated URL
-          window.location.href = url.toString();
-        });
-      });
-    }
-  </script>
+                    // Redirect manually with updated URL
+                    window.location.href = url.toString();
+                });
+            });
+        }
+    </script>
     <!-- jQuery js -->
     <script src="js/plugins/jquery.min.js"></script>
     <!-- swup js -->
