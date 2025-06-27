@@ -20,6 +20,272 @@
     <!-- page name -->
     <title>About Us</title>
 
+    <style>
+        .counter_wrapper {
+            width: 100%;
+            float: left;
+            /* padding: 46px 0 138px; */
+        }
+
+        .counter_main {
+            width: 100%;
+            float: left;
+            background-color: white;
+            border: 1px solid rgba(210, 210, 210, 0.4);
+            overflow: hidden;
+        }
+
+        .count_details {
+            display: flex;
+            justify-content: flex-start;
+            /* flex-wrap: wrap; */
+            gap: 113px 50px;
+        }
+
+        .count-area {
+            position: relative;
+            /* padding: 122px 15px 320px; */
+            text-align: center;
+            color: var(--PrimaryColor);
+        }
+
+
+        .count-area-content {
+            width: 280px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            gap: 31px;
+        }
+
+        /* .count-area-content::after {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    border-radius: 50px;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background-color: var(--PrimaryColor);
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+}
+
+.count-area-content:nth-child(2n-1)::after {
+    left: 0;
+    bottom: 0;
+    top: auto;
+}
+
+.count-area-content:hover:after {
+    height: 100%;
+    width: 100%;
+} 
+
+.count-area-content:hover .count_number {
+    color: var(--Gray80);
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+}
+
+.count-area-content:hover .count-title {
+    color: var(--StateColor);
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+} */
+
+        .count_number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 0px;
+            color: var(--PrimaryColor);
+            font-family: "mona-Bold";
+            font-size: 36px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+        }
+
+        .count-title {
+            font-size: 16px;
+            color: var(--PrimaryColor);
+            padding: 0 0 3px;
+            line-height: normal;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            font-family: "mona-Regular";
+            border-bottom: 1px solid var(--PrimaryColor);
+            width: 100%;
+            text-align: left;
+        }
+
+        .count_block {
+            width: 100%;
+            float: left;
+            position: relative;
+        }
+
+
+        .wrap-canva-foot {
+            z-index: 2;
+            height: 28.938em;
+            /* border-bottom: 1px solid #555; */
+            position: relative;
+        }
+
+        .counter_bottom_word {
+            position: absolute;
+            bottom: -74px;
+            font-size: 147px;
+            left: 26px;
+            font-family: "mona-Bold";
+            color: var(--PrimaryColor);
+            letter-spacing: 0;
+            display: flex;
+            gap: 34px;
+            display: none;
+        }
+
+        .matterjs-wrapper {
+            z-index: 1;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .footer-link {
+            z-index: 2;
+            color: var(--PrimaryColor);
+            background-color: var(--Pure);
+            border: 1px solid var(--PrimaryColor);
+            border-radius: 50px;
+            padding: 1.1em 3.38em;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .footer-link:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 102%;
+            height: 102%;
+            transform: translate3d(0, 120%, 0);
+            z-index: -1;
+            transition: transform .3s cubic-bezier(0, 0, 0, 1);
+        }
+
+        .footer-link:hover:after {
+            transform: translate(0);
+            background-color: var(--PrimaryColor);
+        }
+
+        .footer-link:hover {
+            color: var(--StateColor);
+        }
+
+        .txt-footer-link {
+            font-family: "mona-Regular";
+            font-size: 20px;
+            line-height: normal;
+        }
+
+        .counter_wrap {
+            position: relative;
+        }
+
+        .wrap-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* z-index: -1; */
+            /* right: 0;
+    margin: 0 auto; */
+        }
+
+        .count-area {
+            position: relative;
+            padding: 50px 15px 46PX;
+            text-align: center;
+            color: var(--PrimaryColor);
+            z-index: 1 !important;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // ==== COUNT DIGITS ON SCROLL ====
+            function isVisible(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight && rect.bottom >= 0;
+            }
+
+            let counterLoaded = false;
+
+            window.addEventListener("scroll", function () {
+                const counterElements = document.querySelectorAll('.count-digit');
+
+                if (!counterLoaded && counterElements.length && isVisible(counterElements[0])) {
+                    counterElements.forEach(el => {
+                        const target = parseInt(el.textContent, 10) || 0;
+                        let current = 0;
+                        const interval = setInterval(() => {
+                            current = Math.min(current + Math.ceil(target / 100), target);
+                            el.textContent = current;
+                            if (current >= target) clearInterval(interval);
+                        }, 80);
+                    });
+                    counterLoaded = true;
+                }
+            });
+
+            // ==== SCROLL RESTORATION ====
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+            window.scrollTo(0, 0);
+
+            // ==== FOOTER ANIMATION INIT ====
+            let footerAniInit = false;
+
+            window.addEventListener("scroll", function () {
+                const counterWrapper = document.querySelector(".counter_wrapper");
+                if (counterWrapper && !footerAniInit && window.scrollY >= counterWrapper.offsetTop) {
+                    // Initialize your Matter.js animation here
+                    // This is where you add your bodies, call requestAnimationFrame(update), etc.
+                    // Placeholder:
+                    console.log("Initialize Matter.js footer animation");
+                    footerAniInit = true;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -76,7 +342,8 @@
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
                                     <li class="mil-has-children">
-                                        <a href="#" onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;" >Home</a>
+                                        <a href="#"
+                                            onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;">Home</a>
                                         <!-- <ul>
                                             <li><a href="home-1.html">Landing page</a></li>
                                             <li><a href="home-2.html">Personal</a></li>
@@ -84,7 +351,8 @@
                                         </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#" onclick="window.location.href='Portfolio.html?nocache=' + new Date().getTime(); return false;" >Portfolio</a>
+                                        <a href="#"
+                                            onclick="window.location.href='Portfolio.html?nocache=' + new Date().getTime(); return false;">Portfolio</a>
                                         <!-- <ul>
                                             <li><a href="portfolio-1.html">Grid type 1</a></li>
                                             <li><a href="portfolio-2.html">Grid type 2</a></li>
@@ -92,21 +360,26 @@
                                         </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#" onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;" >Product</a>
+                                        <a href="#"
+                                            onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;">Product</a>
                                         <!-- <ul>
                                             <li><a href="services.html">Services List</a></li>
                                             <li><a href="service.html">Single service</a></li>
                                         </ul> -->
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#" onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;" >Contect Us</a>
+                                        <a href="#"
+                                            onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;">Contect
+                                            Us</a>
                                         <!-- <ul>
                                             <li><a href="blog.html">Blog List</a></li>
                                             <li><a href="publication.html">Publication</a></li>
                                         </ul> -->
                                     </li>
                                     <li class="mil-has-children mil-active">
-                                        <a href="#" onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;" >About Us</a>
+                                        <a href="#"
+                                            onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;">About
+                                            Us</a>
                                         <!-- <ul>
                                             <li><a href="team.html">Team</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -131,7 +404,8 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="#" onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;" class="mil-logo">A.</a>
+                <a href="#" onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;"
+                    class="mil-logo">A.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -160,8 +434,12 @@
                         </div>
                         <div class="container">
                             <ul class="mil-breadcrumbs mil-mb-60">
-                                <li><a href="#" onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;" >Homepage</a></li>
-                                <li><a href="#" onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;">About Us</a></li>
+                                <li><a href="#"
+                                        onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;">Homepage</a>
+                                </li>
+                                <li><a href="#"
+                                        onclick="window.location.href='about_us.html?nocache=' + new Date().getTime(); return false;">About
+                                        Us</a></li>
                                 <!-- <li><a href="project-1.html">Project</a></li> -->
                             </ul>
                             <h1 class="mil-mb-60">Our Interior <span class="mil-thin">by <br> shapeinterior</span></h1>
@@ -290,6 +568,56 @@
             <!-- project -->
 
             <!-- project end -->
+            <div class="counter_wrapper" id="Counter">
+                <div class="max-width-1920">
+                    <div class="counter_main">
+                        <div class="container">
+                            <div class="counter_wrap">
+                                <div class="count-area" data-diff="100">
+                                    <div class="count_details ">
+                                        <div class="count-area-content">
+                                            <div class="count-title">Happy Client</div>
+                                            <div class="count_number">
+                                                <div class="count-digit">456</div>
+                                                <span>+</span>
+                                            </div>
+                                        </div>
+                                        <div class="count-area-content">
+                                            <div class="count-title">Transport</div>
+                                            <div class="count_number">
+                                                <div class="count-digit">513</div>
+                                                <span>+</span>
+                                            </div>
+                                        </div>
+                                        <div class="count-area-content">
+                                            <div class="count-title">Employees</div>
+                                            <div class="count_number">
+                                                <div class="count-digit">53</div>
+                                                <span>+</span>
+                                            </div>
+                                        </div>
+                                        <div class="count-area-content">
+                                            <div class="count-title">Years Experiance</div>
+                                            <div class="count_number">
+                                                <div class="count-digit">17</div>
+                                                <span>+</span>
+                                            </div>
+                                        </div>
+                                        <div class="count-area-content">
+                                            <div class="count-title">Agents</div>
+                                            <div class="count_number">
+                                                <div class="count-digit">50</div>
+                                                <span>+</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- call to action -->
             <section class="mil-soft-bg"
@@ -308,118 +636,124 @@
 
                         </div>
                     </div>
-                    
+
                 </div>
             </section>
             <!-- call to action end -->
 
             <!-- footer -->
             <footer class="mil-dark-bg">
-                    <div class="mi-invert-fix">
-                        <div class="container mil-p-120-60">
-                            <div class="row justify-content-between">
-                                <div class="col-md-4 col-lg-4 mil-mb-60">
+                <div class="mi-invert-fix">
+                    <div class="container mil-p-120-60">
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30">shapeinterior.</div>
+                                <div class="mil-muted mil-logo mil-up mil-mb-30">shapeinterior.</div>
 
-                                    <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
+                                <p class="mil-light-soft mil-up mil-mb-30">Subscribe our newsletter:</p>
 
-                                    <form class="mil-subscribe-form mil-up">
-                                        <input type="text" placeholder="Enter our email">
-                                        <button type="submit"
-                                            class="mil-button mil-icon-button-sm mil-arrow-place"></button>
-                                    </form>
+                                <form class="mil-subscribe-form mil-up">
+                                    <input type="text" placeholder="Enter our email">
+                                    <button type="submit"
+                                        class="mil-button mil-icon-button-sm mil-arrow-place"></button>
+                                </form>
 
-                                </div>
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="row justify-content-end">
-                                        <div class="col-md-6 col-lg-7">
-
-                                            <nav class="mil-footer-menu mil-mb-60">
-                                                <ul>
-                                                    <li class="mil-up mil-active">
-                                                        <a href="#" onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;" >Home</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="#" onclick="window.location.href='portfolio.html?nocache=' + new Date().getTime(); return false;">Portfolio</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="#" onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;">Product</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="#" onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;">Contact</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="#" onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;">About Us</a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5">
-
-                                            <ul class="mil-menu-list mil-up mil-mb-60">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+                            <div class="col-md-7 col-lg-6">
+                                <div class="row justify-content-end">
+                                    <div class="col-md-6 col-lg-7">
 
-                            <div class="row justify-content-between flex-sm-row-reverse">
-                                <div class="col-md-7 col-lg-6">
-
-                                    <div class="row justify-content-between">
-
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
-                                                <span class="mil-no-wrap">+51 174 705 812</span>
-                                            </p>
-
-                                        </div>
-                                        <div class="col-md-6 col-lg-5 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands
-                                                <span class="mil-no-wrap">+31 174 705 811</span>
-                                            </p>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-4 col-lg-6 mil-mb-60">
-
-                                    <div class="mil-vert-between">
-                                        <div class="mil-mb-30">
-                                            <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i
-                                                            class="far fa-circle"></i></a></li>
+                                        <nav class="mil-footer-menu mil-mb-60">
+                                            <ul>
+                                                <li class="mil-up mil-active">
+                                                    <a href="#"
+                                                        onclick="window.location.href='home-1.html?nocache=' + new Date().getTime(); return false;">Home</a>
+                                                </li>
+                                                <li class="mil-up">
+                                                    <a href="#"
+                                                        onclick="window.location.href='portfolio.html?nocache=' + new Date().getTime(); return false;">Portfolio</a>
+                                                </li>
+                                                <li class="mil-up">
+                                                    <a href="#"
+                                                        onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;">Product</a>
+                                                </li>
+                                                <li class="mil-up">
+                                                    <a href="#"
+                                                        onclick="window.location.href='contact.html?nocache=' + new Date().getTime(); return false;">Contact</a>
+                                                </li>
+                                                <li class="mil-up">
+                                                    <a href="#"
+                                                        onclick="window.location.href='blog.html?nocache=' + new Date().getTime(); return false;">About
+                                                        Us</a>
+                                                </li>
                                             </ul>
-                                        </div>
-                                        <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.
-                                        </p>
-                                    </div>
+                                        </nav>
 
+                                    </div>
+                                    <div class="col-md-6 col-lg-5">
+
+                                        <ul class="mil-menu-list mil-up mil-mb-60">
+                                            <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
+                                            <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
+                                            <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
+                                            <li><a href="#." class="mil-light-soft">Careers</a></li>
+                                        </ul>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row justify-content-between flex-sm-row-reverse">
+                            <div class="col-md-7 col-lg-6">
+
+                                <div class="row justify-content-between">
+
+                                    <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                        <h6 class="mil-muted mil-up mil-mb-30">Canada</h6>
+
+                                        <p class="mil-light-soft mil-up">71 South Los Carneros Road, California
+                                            <span class="mil-no-wrap">+51 174 705 812</span>
+                                        </p>
+
+                                    </div>
+                                    <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                        <h6 class="mil-muted mil-up mil-mb-30">Germany</h6>
+
+                                        <p class="mil-light-soft mil-up">Leehove 40, 2678 MC De Lier, Netherlands
+                                            <span class="mil-no-wrap">+31 174 705 811</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 col-lg-6 mil-mb-60">
+
+                                <div class="mil-vert-between">
+                                    <div class="mil-mb-30">
+                                        <ul class="mil-social-icons mil-up">
+                                            <li><a href="#." target="_blank" class="social-icon"> <i
+                                                        class="far fa-circle"></i></a></li>
+                                            <li><a href="#." target="_blank" class="social-icon"> <i
+                                                        class="far fa-circle"></i></a></li>
+                                            <li><a href="#." target="_blank" class="social-icon"> <i
+                                                        class="far fa-circle"></i></a></li>
+                                            <li><a href="#." target="_blank" class="social-icon"> <i
+                                                        class="far fa-circle"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <p class="mil-light-soft mil-up">© Copyright 2023 - Mil. All Rights Reserved.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
             <!-- footer end -->
 
             <!-- hidden elements -->
