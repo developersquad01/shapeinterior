@@ -23,6 +23,22 @@
 </head>
 
 <body>
+    <script>
+        // Run when the page is loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title'); // Get the "title" parameter
+
+            if (title) {
+                // Decode the title and do something with it
+                const decodedTitle = decodeURIComponent(title);
+                console.log("Series title:", decodedTitle); // Just for debugging
+
+                // Example: Show it in an element with ID "series-title"
+                document.getElementById('series-title').textContent = decodedTitle;
+            }
+        });
+    </script>
 
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
@@ -749,7 +765,7 @@
                 const title = titleElement ? encodeURIComponent(titleElement.textContent.trim()) : 'untitled';
                 const nocache = new Date().getTime();
 
-                window.location.href = `series.html?nocache=${nocache}&title=${title}`;
+                window.location.href = `black.html?nocache=${nocache}&title=${title}`;
             });
         });
     </script>
