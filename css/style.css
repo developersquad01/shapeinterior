@@ -2222,7 +2222,8 @@ lines
 }
 
 .mil-lines-place .mil-lines {
-    opacity: 0.07;
+    /* opacity: 0.07; */
+    opacity: 0.3;
     pointer-events: none;
 }
 
@@ -2235,7 +2236,7 @@ lines
 .mil-lines-place .mil-lines path,
 .mil-lines-place .mil-lines rect,
 .mil-lines-place .mil-lines line {
-    stroke: rgb(0, 0, 0);
+    stroke: rgb(122, 122, 122);
 }
 
 .mil-lines-place .mil-lines .mil-move {
