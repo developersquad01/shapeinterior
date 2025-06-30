@@ -68,13 +68,27 @@
   </script> -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-
+            // debugger
             // Get the query parameters from the current URL
             const params = new URLSearchParams(window.location.search);
 
             // Get the value of the 'title' parameter
-            const title = params.get('id');
+            let title = params.get('id');
             document.getElementById("seriestitle").innerText = title;
+
+            let imgNames = ["M_010001.jpg","M_020001.jpg","M_030001.jpg","M_040001.jpg","M_050001.jpg",
+                "M_060001.jpg","M_070001.jpg","M_080001.jpg","M_090001.jpg", "M_100001.jpg", "M_110001.jpg"];
+
+            let CN = document.getElementsByClassName("dynamicImg");
+            let _title = title.split(" ")[0];
+            imgNames.forEach((imgName, index) => {
+
+                console.log("-------------",imgName)
+                if (CN[index]) {
+                    CN[index].src = `img/reseoo/${_title}/Black/${imgName}`;
+                    CN[index].alt = `${_title}`;
+                }
+            });
 
         });
     </script>
@@ -231,7 +245,7 @@
                             <ul class="mil-breadcrumbs mil-mb-60">
                                 <li><a href="home-1.html?id=">Homepage</a></li>
                                 <li><a href="reseooProducts.html">Products</a></li>
-                                <li><a href="sub-catagory.html">Sub-Category</a></li>
+                                <li><a href="Bathroom.html">Bathroom Series</a></li>
                                 <li><a href="#">Colors</a></li>
                             </ul>
                             <h1 class="mil-mb-60" id="seriestitle"> <br> <span class="mil-thin"></span></h1>
@@ -267,9 +281,10 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_010001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_010001.jpg" alt="cover"> -->
+                                        <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
@@ -285,16 +300,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60">
+                                <a href="#" class="mil-blog-card mil-mb-60">
                                     <div class="mil-cover-frame mil-up"   style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_020001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_020001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Mortise</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Square series</h4>
+                                        <h4 class="mil-up mil-mb-30">Shop Dish</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -303,16 +319,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_030001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_030001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Shelf & corner</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Round series</h4>
+                                        <h4 class="mil-up mil-mb-30">Napkin Ring</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -321,16 +338,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_040001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_040001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Hangers</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">OVEL series</h4>
+                                        <h4 class="mil-up mil-mb-30">Tumbler Holder</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -339,16 +357,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_050001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_050001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">SS key stand</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Qubix 3943</h4>
+                                        <h4 class="mil-up mil-mb-30">Rob Hook</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -357,16 +376,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60">
+                                <a href="#" class="mil-blog-card mil-mb-60">
                                     <div class="mil-cover-frame mil-up"   style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_060001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_060001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Towel rod & rack</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Sere</h4>
+                                        <h4 class="mil-up mil-mb-30">liquid Dispenser</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -375,16 +395,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_070001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_070001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Shelf bath & acc.</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Royal Valentine</h4>
+                                        <h4 class="mil-up mil-mb-30">Paper Holder</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -393,16 +414,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_080001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_080001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Bath acc.</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Ikonik</h4>
+                                        <h4 class="mil-up mil-mb-30">Towel Rack</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -411,16 +433,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_090001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_090001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Door handles</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Creast 3943</h4>
+                                        <h4 class="mil-up mil-mb-30">Double Soap Dish</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -429,16 +452,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_100001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_100001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Door handles</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Ellipse 3943</h4>
+                                        <h4 class="mil-up mil-mb-30">Soap Dish With Tumbler Holder</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
@@ -447,16 +471,17 @@
                                 </a>
                             </div>
                             <div class="col-lg-6">
-                                <a href="#" onclick="window.location.href='sub-catagory.html?nocache=' + new Date().getTime(); return false;" class="mil-blog-card mil-mb-60" >
+                                <a href="#" class="mil-blog-card mil-mb-60" >
                                     <div class="mil-cover-frame mil-up " style="border-radius: 60px;">
-                                        <img src="img/reseoo/Black/M_110001.jpg" alt="cover">
+                                        <!-- <img src="img/reseoo/Black/M_110001.jpg" alt="cover"> -->
+                                         <img class="dynamicImg" >
                                     </div>
                                     <div class="mil-post-descr" style="padding: 0px 30px 0px 30px;">
                                         <div class="mil-labels mil-up mil-mb-30">
                                             <!-- <div class="mil-label mil-upper mil-accent">Door handles</div> -->
                                             <!-- <div class="mil-label mil-upper">may 24 2023</div> -->
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">Project Square</h4>
+                                        <h4 class="mil-up mil-mb-30">Soap Dish With Liquid Dispenser</h4>
                                         <!-- <p class="mil-post-text mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!</p> -->
                                         <!-- <div class="mil-link mil-dark mil-arrow-place mil-up">
                                             <span>Explore</span>
